@@ -1,0 +1,42 @@
+class Media {
+    notas: Array<number> = [];
+    media: number = 0;
+    
+
+
+    lerNotas(): void {
+        for (let i = 0; i < 5; i++) {
+            this.notas[i] = Number(prompt(`Digite a nota`))
+        }
+    }
+    lermedia(): number {
+        let med = 0
+        
+        for (let i = 0; i < this.notas.length; i++) {
+            med += this.notas[i]
+        }
+        this.media = med / 5
+        return this.media
+    }
+    acima():number {
+        let ficou =0
+        for (let i = 0; i < this.notas.length; i++){
+            if (this.notas[i] >= this.media) {
+                ficou +=1
+            }
+        }
+        return ficou
+    }
+    apresenta(): string{
+
+        return `A média foi ${this.lermedia()} e ${this.acima()} ficaram acima da média`
+    }
+
+
+}
+
+let teste: Media = new Media();
+
+
+teste.lerNotas();
+alert(teste.apresenta());

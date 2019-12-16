@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+
+
+    </style>
+    <title>Site</title>
+</head>
+
+<body onload="carregou()">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <div class="container">
+        <div class="form-row">
+            <div class="form-group col-xs-12 col-md-6">
+                <label>Valor 1</label>
+                <input type="text" class="form-control" placeholder="Digite o valor 1" id="n1">
+            </div>
+            <div class="form-group col-xs-12 col-md-6">
+                <label>Valor 2</label>
+                <input type="text" class="form-control" placeholder="Digite o valor 2" id="n2">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-xs-12 col-md-6">
+                <label>Valor 3</label>
+                <input type="text" class="form-control" placeholder="Digite o valor 3" id="n3">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-12">
+                <label>Resultado as médias</label>
+                <input type="text" class="form-control" placeholder="Média" id="resultado">
+            </div>
+        </div>
+        <button type="button" class="btn btn-success" onclick="calcular()">Calcular média</button>
+    </div>
+
+
+
+    <script>
+        function carregou() {
+            alert("Carregou o sistema!!!!!!!")
+        }
+        function calcular(){
+            var v1 = Number(document.getElementById("n1").value)
+            var v2 = Number(document.getElementById("n2").value)
+            var v3 = Number(document.getElementById("n3").value)
+            var media= (v1+v2+v3)/3
+            document.getElementById("resultado").value = media
+        }
+    </script>
+
+
+
+</body>
+
+</html>

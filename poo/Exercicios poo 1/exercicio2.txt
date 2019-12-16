@@ -1,0 +1,18 @@
+class Desconto{
+    produto: number = 0;
+    resultado: number = 0;
+
+    constructor(valor: number) {
+        this.produto = valor;
+    }
+    calc(): number{
+        let x = this.produto;
+        let porce = x *0.09
+        this.resultado += x - porce
+
+         return this.resultado
+
+    }
+}
+let teste: Desconto = new Desconto(100);
+alert(teste.calc());

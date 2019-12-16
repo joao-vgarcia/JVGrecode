@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+        .a {
+            background: blue;
+            color: white;
+        }
+
+        .aa {
+
+            font-size: 20px;
+            font: bolder;
+        }
+    </style>
+    <title>Site</title>
+</head>
+
+<body>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand"><img src="ima1.png" alt="Logo" style="width:40px;"></a>
+        <a class="navbar-brand" href="#">Recode Pro - SP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="site.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cursos.html">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Tecnologias
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Javascript</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--a nav bar com os expands e o menu de contxto com os links-->
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Recode Pro - São Paulo</h1>
+            <p>O maior treinamento Full Stack do Brasil</p>
+            <p>Professor: Flávio Mota</p>
+        </div>
+        <!--Jumbotron com as coisas importantes que não vão sair do lugar-->
+        <div class="row a">
+            <div class="col-12 aa">
+                <p>Faça seu cadastro</p>
+            </div>
+        </div>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-sm-12 col-md-4">
+                    <label for="primeironome">Primeiro Nome</label>
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="Flavio">
+                </div>
+                <div class="form-group col-sm-12 col-md-4">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" class="form-control" id="inputPassword4" placeholder="Mota">
+                </div>
+                <div class="form-group col-sm-12 col-md-4">
+                    <label for="inlineFormInputGroupUsername">Nome de usuário</label>
+                    <label class="sr-only" for="inlineFormInputGroupUsername">Nome de usuário</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                            placeholder="Username">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+
+
+                <div class="form-group col-sm-12 col-md-5">
+                    <label for="inputAddress">Cidade</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="São Paulo">
+                </div>
+                <div class="form-group col-sm-12 col-md-2">
+                    <label for="inputState">Estado</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Escolha</option>
+                        <option>SP</option>
+                        <option>RJ</option>
+                        <option>MG</option>
+                        <option>ES</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-12 col-md-5">
+                    <label for="inputCity">CEP</label>
+                    <input type="text" class="form-control" id="inputCity" placeholder="00000-000">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="form-group offset-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Aceito os termos e condições
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-auto my-1">
+                <button type="submit" class="btn btn-primary">Enviar dados</button>
+            </div>
+        </form>
+
+
+
+</body>
+
+</html>

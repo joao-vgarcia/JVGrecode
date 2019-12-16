@@ -1,0 +1,25 @@
+class Exe {
+    vetor: Array<number>=[];
+    constructor() {
+        for (let i = 0; i < 5; i++) {
+            this.vetor[i] = Number(prompt(`Digite`))
+        }
+    }
+    retirar() {
+        this.vetor.pop()
+    }
+    colocar() {
+        this.vetor.push(Number(prompt(`Coloque um número`)))
+    }
+    mostrar():string{
+        return`Vetor ${this.vetor}`
+    }
+
+
+
+}
+
+let teste: Exe = new Exe();
+teste.retirar();
+teste.colocar();
+alert(teste.mostrar());

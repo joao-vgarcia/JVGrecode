@@ -1,0 +1,18 @@
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <label>Digite a nota</label>
+                <input type="text" class="form-control" id="n1" placeholder="Digite..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-dark btn-block" onclick="calc()">Calcular</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                    <label id="a1"></label>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dasafio 2</title>
+</head>
+
+<body>
+    <div id="c"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+        class App extends React.Component {
+
+            render() {
+                return (
+                    <div>
+                        <Conteudo />
+                    </div>
+
+                )
+            }
+        }
+
+        class Conteudo extends React.Component {
+     
+            constructor(props) {
+                super(props);
+                this.state = {
+                    titulo: "Desenvolvedor Full stack",
+                    p1: "Objetivo",
+                    text1: "Aprender tecnologias incríveis para construir coisas magnificas",
+                    p2: "Tecnologias aprendidas",
+                    text2: "TypeScript, React, entre outras",
+                    botao: "Ingles"
+
+                }
+            }
+
+            traduzir = () => {
+                if (this.state.botao == "Ingles") {
+                    this.setState({ titulo: "Full stack developer", p1: "Objective", text1: "Learn amazing technologies to build great things", p2: "Technologies learned", text2: "TypeScript, React, and more", botao: "Portugues" })
+                } else if (this.state.botao == "Portugues") {
+                    this.setState({ titulo: "Desenvolvedor Full stack", p1: "Objetivo", text1: "Aprender tecnologias incríveis para construir coisas magnificas", p2: "Tecnologias aprendidas", text2: "TypeScript, React, entre outras", botao:"Ingles" })
+                }
+
+            }
+         
+
+            render() {
+                return (
+                    <div>
+                        <button type="button" onClick={this.traduzir}>{this.state.botao}</button>
+                        <h1>{this.state.titulo}</h1>
+                        <p><b>{this.state.p1} :</b>{this.state.text1}</p>
+                        <p><b>{this.state.p2} :</b>{this.state.text2}</p>
+                    </div>
+                )
+            }
+
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('c'));
+    </script>
+
+</body>
+
+</html>

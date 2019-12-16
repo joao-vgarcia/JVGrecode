@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+
+
+    </style>
+
+    <title>Moeda</title>
+
+</head>
+
+<body onload="carregou()">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <div class="jumbotron">
+        <h1>Moeda</h1>
+    </div>
+    <div class="container">
+
+        <form>
+            <div class="form-row">
+                <div class="form-group col-xs-12 col-sm-12">
+                    <input type="text" class="form-control" id="n1" placeholder="Digite o valor">
+                </div>
+                <div class="form-group col-xs-12 col-sm-12">
+                    <div class="form-group">
+                        <select class="form-control" id="opc">
+                            <option>--Selecione a conversão</option>
+                            <option>Dolar</option>
+                            <option>Euro</option>
+                            <option>Peso</option>
+                            <option>Iene</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <button type="button" class="btn btn-dark btn-block"  onclick= "calc()" >Calcular</button>
+
+
+
+                <div class="form-row">
+                    <div class="form-group col-12">
+                        <br>
+                        <input type="text" id="aqui" placeholder="Resultado">
+                    </div>
+
+        </form>
+
+
+
+
+
+    </div>
+
+    <script>
+        function calc() {
+            var n1 = Number.parseFloat(document.getElementById("n1").value)
+
+            var conta = document.getElementById("opc").value
+            var res = 0
+            if (conta == "Dolar") {
+                res = n1 * 4.15
+            } else if (conta == "Euro") {
+                res = n1 * 5.10
+            } else if (conta == "Peso") {
+                res = n1 * 0.07
+            } else if (conta == "Iene") {
+                res = n1 * 0.03
+            }
+
+            document.getElementById("aqui").value = res.toFixed(2)
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

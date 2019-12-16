@@ -1,0 +1,17 @@
+class Restaurante{
+    conta: number = 0;
+    final: number = 0;
+
+    constructor(valor: number) {
+        this.conta = valor;
+    }
+    calc(): number{
+        let x = this.conta;
+        let porce = x *0.1
+        this.final += x + porce
+        return this.final
+
+    }
+}
+let teste: Restaurante = new Restaurante(100);
+alert(`O valor da conta com a gorjeta é ${teste.calc()}`);

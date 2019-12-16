@@ -1,0 +1,24 @@
+class Salario{
+    hora: number = 0;
+    aulas: number = 0;
+    desconto: number = 0;
+    resultado :number =0
+
+    constructor(horaAula: number, aulasDadas:number, inss:number) {
+        this.aulas = aulasDadas;
+        this.hora = horaAula;
+        this.desconto = inss;
+    }
+    salario(): number{
+        let x = this.aulas;
+        let y = this.desconto /100;
+        let z = this.hora;
+        let porce = (x*z) * y
+        this.resultado += (x*z) - porce
+
+         return this.resultado
+
+    }
+}
+let teste: Salario = new Salario(10, 100,10);
+alert(teste.salario());

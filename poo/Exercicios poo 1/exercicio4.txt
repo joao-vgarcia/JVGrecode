@@ -1,0 +1,18 @@
+class Total{
+    salmin: number = 998;
+    sal: number = 0;
+    total: number = 0;
+
+    constructor(valor: number) {
+        this.sal = valor;
+    }
+    calc(): number{
+        let x = this.salmin;
+        let z = this.sal
+        let res = z / x;
+        return res
+
+    }
+}
+let teste: Total = new Total(4210);
+alert(`O total de salários que você recebe é ${teste.calc().toFixed(0)}`);

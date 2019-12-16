@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+
+
+    </style>
+    <title>14 / 11 / 19 aula 2</title>
+</head>
+
+<body onload="carregou()">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script>
+        var arr = []
+        var brr = []
+        
+
+
+        for (let a = 0; a < 5; a++) {
+
+            arr[a] = Number(prompt("Digite o vetor"))
+        }
+        for (let b = 0; b < 5; b++) {
+            brr[b] = Number(prompt("Digite o outro vetor"))
+        }
+        var soma= arr.concat(brr)
+        document.write(soma)
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+h1{
+    text-align: center;
+    font-size: 25px;
+    color: black;
+}
+
+a:hover{
+    font-size: 20px;
+    color: blue;
+}
+#paragrafo{
+    text-align: left;
+    font-size: 20px;
+    color: darkslategrey;
+}
+
+.navega{
+    width: 900px;
+    height: 50px;
+    background-color: whitesmoke;
+    text-align: center;
+
+}
+
+#alinhar{
+    padding: 20px;
+}
+
+.principal{
+    width: 900px;
+    height: 800px;
+    display: table;
+    background-color: whitesmoke;
+
+}
+.cabecalho{
+    width: 900px;
+    height: 100px;
+    color: black;
+
+}
+.cabecalho h1{
+    text-align: center;
+    color: black;
+}
+
+
+.esquerda{
+    width: 100px;
+    height: 600px;
+    float: left;
+
+}
+.rodapegeral{
+    width: 900px;
+    height: 80px;
+    background-color: whitesmoke;
+    float: bottom;
+    color: black;
+    font-size: 20px;
+
+}
+.clear{
+    clear: both;
+}
+
+.corpoSection{
+    width: 900px;
+    height: 600px;
+    background-color: whitesmoke;
+    color: black;
+}
+.corpoSection p{
+    position: absolute;
+    top: 500px;
+    left: 400px;
+}
+.corpoSection button{
+    position: absolute;
+    top: 570px;
+    left: 500px;
+}
+#par{
+    text-align: right;
+    font-size: 30px;
+    color: black;
+    position: relative;
+    top:100px;
+}
+.cabecalhos{
+    width: 800px;
+    height: 100px;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 110px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
+

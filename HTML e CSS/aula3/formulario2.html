@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="formularioc.css">
+    <title>Matrícula</title>
+</head>
+<body>
+    <table>
+            <tr>
+                <td><img src="recode.png" style="width: 50px; height: 40px;"><h1>Matricule-se RECODE</h1></td>
+                <td></td>
+                <td><td>
+            </tr>
+    </table>
+
+    <form>
+        Nome de usuário:<input type="text" name="Nome" placeholder="Seu nome aqui"><br>
+        RG: <input type="number" name="rg" placeholder="99999999-0"><br>
+        CPF:<input type="number" name="cpf" placeholder="111.222.333-44"><br>
+        Data de nascimento <input type="date" name="nascimento" placeholder="10/10/2010"><br>
+        Email:<input type="text" name="email" placeholder="email@example.com"><br>
+        Telefone:<input type="number" name="telefone" placeholder="11 1111111111"><br>
+        Endereço:<input type="text" name="endreco" placeholder="Seu endereço auqi">
+        <hr>Assinale os cursos que deseja fazer:<br>
+        <input type="checkbox" value="c1">Javascript
+        <input type="checkbox" value="c2">Node.js
+        <input type="checkbox" value="c3">HTML<br>
+        <input type="checkbox" value="c4">CSS
+        <input type="checkbox" value="c5">Python
+        <input type="checkbox" value="c5">SQL
+        <hr>Descreva seu nível de conhecimento:<br>
+        <input type="radio" name="conhece" value="r1">Nenhum conhecimento     1<br>   
+        <input type="radio" name="conhece" value="r2">Já ouvi falar           2   <br>
+        <input type="radio" name="conhece" value="r3">Pouco conhecimento      3   <br>
+        <input type="radio" name="conhece" value="r4">Já usei alguma vez      4   <br>
+        <input type="radio" name="conhece" value="r5">Sei bem sobre o assunto 5   <br>
+        <hr>
+        Escolha a unidade que deseja estudar:<br>
+        <select name="unidade">
+                <option value="un0"> </option>
+            <option value="un1">Rio de Janeiro</option>
+            <option value="un2">São Paulo</option>
+            <option value="un3">Osasco</option>
+            <option value="un4">Brasília</option>
+            <option value="un5">Salvador</option>
+            <option value="un6">Recife</option>
+        </select>  
+        <br>
+        Deixe alguma mensagem para podermos entrar em contato:<br>
+        <textarea name="mensagem" rows="5" cols="40" placeholder="Mensagem..."></textarea>       
+        <br>
+        <input type="reset"><input type="submit"> 
+    </form>
+    
+</body>
+</html>

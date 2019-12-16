@@ -1,0 +1,38 @@
+class Empresa {
+    idade: number =0;
+    trabalho: number = 0;
+    nemp: number;
+    constructor(numero :number) {
+        this.nemp = numero;
+    }
+
+    nascimento(): void {
+        let ano = Number(prompt("Digite o ano do nascimento"))
+        let idd = 2019 - ano
+        this.idade = idd;
+    }
+    ingresso():void {
+        let n1 = Number(prompt("Digite o ano de ingresso na empresa"))
+        let trabalhado = 2019 - n1
+        this.trabalho = trabalhado
+    }
+    calc():string {
+        let anoNasc = this.idade;
+        let tempo = this.trabalho;
+        if (anoNasc >= 65) {
+            return "Requer aposentadoria por idade " +anoNasc
+        } else if (tempo >= 30) {
+            return "Requer aposentadoria por tempo de contribuição "+ tempo
+        } else if (anoNasc >= 60 && tempo >=25) {
+            return "Requerer aposentadoria"
+        } else {
+            return "Não requerer aposentadoria"
+        }
+    }
+
+}
+let teste: Empresa = new Empresa(1);
+
+teste.nascimento()
+teste.ingresso()
+alert(teste.calc())

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        table,
+        th,
+        td,
+        tr {
+            border: 1px solid black;
+        }
+    </style>
+    <title>Desafio 1</title>
+</head>
+
+<body>
+
+    <script>
+        var objetoJson = { "funcionarios": [{ "nome": "João da Silva", "skills": ["Java", "PHP", "Javascript", "React"] }, { "nome": "Renata Souza", "skills": ["Python", "Angular"] }, { "nome": "Rodrigo Campos", "skills": ["Scrum", "Project", "Office", "Gestão de Equipe"] }, { "nome": "Tarcisio Moura", "skills": ["Shell Script", "Linux", "Apache", "Segurança"] }, { "nome": "Joselito Marmita", "skills": ["Manutenção de PC", "Cabeamento", "Configuração"] }, { "nome": "Fernando Pessoa", "skills": ["Mídias Sociais", "Marketing", "Design"] }] }
+        var oobj = JSON.stringify(objetoJson);
+        var obj = JSON.parse(oobj);
+
+        document.writeln(`<table>`); document.write(`<tr><th>Nome</th><th>Skills</th>`);
+
+        for (var i = 0; i < obj.funcionarios.length; i++) {
+            document.write(`<tr>`)
+            document.write(`<td rowspan="${obj.funcionarios[i].skills.length + 1}"> ${obj.funcionarios[i].nome}</td>`)
+            document.write(`<td>`)
+            for (var a = 0; a < obj.funcionarios[i].skills.length; a++) {
+                // document.write(`<tr>`)
+                document.write(`<tr><td> ${obj.funcionarios[i].skills[a]} </td></tr>`)
+            }
+            document.write(`</td>`)
+            document.write(`</tr>`)
+
+        }
+
+
+
+        document.write(`</table>`)
+    </script>
+
+</body>
+
+</html>

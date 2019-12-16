@@ -1,0 +1,39 @@
+class Problema {
+    arr: Array<number> = [];
+    qualquer: number = 0;
+    
+
+
+    lerar(): void {
+        for (let i = 0; i < 10; i++) {
+            this.arr[i] = Number(prompt(`Digite o ${ i+ 1}º número`))
+        }
+    }
+    lerqualquer(): void {
+        this.qualquer = Number(prompt(`Digite um número qualquer`))
+    }
+
+    verificar(): string {
+        let sim = null
+        for (let i = 0; i < this.arr.length; i++){
+            if (this.qualquer == this.arr[i]) {
+                sim = i
+            }
+        }
+        if ( sim != null) {
+            return `O número existe e está na posição ${sim +1}`
+        } else {
+            return `O número não existe`
+        }
+         
+    }
+
+
+}
+
+let teste: Problema = new Problema();
+
+
+teste.lerar();
+teste.lerqualquer();
+alert(teste.verificar());

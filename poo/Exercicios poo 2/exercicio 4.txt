@@ -1,0 +1,47 @@
+class Maior {
+    maior: number = 0;
+    menor: number = 0;
+    alcance: number = 0;
+    impar: string = "Par";
+
+
+    verifica(): void {
+        this.alcance = Number(prompt("Digite a quantidade total de números"));
+    }
+    maiormenor(): number {
+        let ma = this.maior
+        let no = this.menor
+        let dig = 0
+        for (let i = 1; i <= this.alcance; i++) {
+            dig = Number(prompt(`Digite o ${i} número`))
+            if (dig > no && dig > ma) {
+                ma = dig
+            } else {
+                no = dig
+            }
+        }
+        return this.maior = ma
+    }
+    par(x: number): string {
+        
+        if (x % 2 == 0) {
+           this.impar = "par"
+        } else {
+            this.impar = "impar"
+        }
+        return this.impar
+    }
+    resultado(): string {
+        return `O maior número digitado é ${this.maior}, e é ${this.impar} `
+    }
+
+
+}
+
+let teste: Maior = new Maior();
+
+
+teste.verifica();
+teste.par(teste.maiormenor())
+
+alert(teste.resultado());

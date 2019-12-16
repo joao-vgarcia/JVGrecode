@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        var dados = {
+            "tudo": {
+                "empregados": [
+                    {
+                        "id": "1",
+                        "nome": "Tom",
+                        "sobrenome": "Cruise",
+                        "foto": "https://f.i.uol.com.br/fotografia/2018/07/26/15326245925b59fed0b9748_1532624592_3x2_xl.jpg"
+                    },
+                    {
+                        "id": "2",
+                        "nome": "Maria",
+                        "sobrenome": "Sharapova",
+                        "foto": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/06/28/18/Sharapova.jpg?w968"
+                    },
+                    {
+                        "id": "3",
+                        "nome": "Robert",
+                        "sobrenome": "Downey Jr.",
+                        "foto": "https://pmcvariety.files.wordpress.com/2017/03/robert-downey-jr1.jpg?w=1000&h=563&crop=1"
+                    }
+                ]
+            }
+        }
+
+        ab = JSON.stringify(dados)
+        abjeto = JSON.parse(ab)
+
+
+        document.writeln(`Tamanho do array ${abjeto.tudo.empregados.length}`)
+        document.writeln(`<br><hr><br>`)
+        document.writeln(`Acessando: <br>`)
+        for (let i = 0; i < abjeto.tudo.empregados.length; i++) {
+            document.writeln(`${abjeto.tudo.empregados[i].id} ${abjeto.tudo.empregados[i].nome} ${abjeto.tudo.empregados[i].sobrenome} <br>`)
+            document.writeln(`<br>`)
+            document.writeln(`<img src="${abjeto.tudo.empregados[i].foto}"style="height: 200px; width:200px"> <br>`)
+            document.writeln(`<br> `)
+        }
+    </script>
+</body>
+
+</html>

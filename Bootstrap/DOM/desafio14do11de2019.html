@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+
+
+    </style>
+    <title>14 / 11 / 19 Desafio em grupo</title>
+</head>
+
+<body onload="carregou()">
+       
+    <div class="jumbotron">
+        <h1>Cadastro de aluno</h1>
+    </div>
+    <div class="container">
+
+        <form>
+            <div class="form-row">
+                <div class="form-group col-xs-12 col-sm-4">
+                    <label>Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+                </div>
+
+                <div class="form-group col-xs-12 col-sm-4">
+                    <label>RG</label>
+                    <input type="number" class="form-control" id="rg" placeholder="RG" required>
+                </div>
+                <div class="form-group col-xs-12 col-sm-4">
+                    <label>CPF</label>
+                    <input type="number" class="form-control" id="cpf" placeholder="CPF" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label>Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-xs-12 col-sm-4">
+                    <label>Nota 1</label>
+                    <input type="text" class="form-control" id="nota1" placeholder="Nota 1" required>
+                </div>
+
+                <div class="form-group col-xs-12 col-sm-4">
+                    <label>Nota 2</label>
+                    <input type="text" class="form-control" id="nota2" placeholder="Nota 2" required>
+                </div>
+                <div class="form-group col-xs-12 col-sm-4">
+                    <label>Nota 3</label>
+                    <input type="text" class="form-control" id="nota3" placeholder="Nota 3" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-xs-12 col-sm-6">
+                    <label>Média</label>
+                    <input type="text" class="form-control" id="media" placeholder="Média">
+                </div>
+                <div class="form-group col-xs-12 col-sm-6">
+                    <label>Situação</label>
+                    <input type="text" class="form-control" id="sit" placeholder="Situação">
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-primary btn-block" type="button" onclick=" calMedia() ">Calcular
+                        média</button>
+                </div>
+                <div class="col-6">
+                    <button type="button" class="btn btn-secondary btn-block" data-toggle="modal" onclick="apresenta()"
+                        data-target="#myModal">Relatório</button>
+                </div>
+            </div>
+
+
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="cabec"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="inforg">a</p>
+                            <p id="infocpf">a</p>
+                            <p id="infoemail">a</p>
+                            <p id="infonota1">a</p>
+                            <p id="infonota2">a</p>
+                            <p id="infonota3">a</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+
+    <script>
+        var aluno = new Object();
+
+
+        function calMedia() {
+            aluno.nota1 = Number(document.getElementById("nota1").value);
+            aluno.nota2 = Number(document.getElementById("nota2").value);
+            aluno.nota3 = Number(document.getElementById("nota3").value);
+            document.getElementById("media").value = (aluno.nota1 + aluno.nota2 + aluno.nota3) / 3
+            if ((aluno.nota1 + aluno.nota2 + aluno.nota3) / 3 <= 5) {
+                document.getElementById("sit").value = "Reprovado"
+            } else if ((aluno.nota1 + aluno.nota2 + aluno.nota3) / 3 > 5 && (aluno.nota1 + aluno.nota2 + aluno.nota3) / 3 <= 7) {
+                document.getElementById("sit").value = "Recuperação"
+            } else {
+                document.getElementById("sit").value = "Aprovado"
+            }
+        }
+        function apresenta() {
+            aluno.nome = document.getElementById("nome").value;
+            aluno.rg = Number(document.getElementById("rg").value);
+            aluno.cpf = Number(document.getElementById("cpf").value);
+            aluno.email = document.getElementById("email").value;
+            aluno.nota1 = document.getElementById("nota1").value;
+            aluno.nota2 = document.getElementById("nota2").value;
+            aluno.nota3 = document.getElementById("nota3").value;
+            document.getElementById("cabec").innerHTML = aluno.nome;
+            document.getElementById("inforg").innerHTML = aluno.rg;
+            document.getElementById("infocpf").innerHTML = aluno.cpf;
+            document.getElementById("infoemail").innerHTML = aluno.email;
+            document.getElementById("infonota1").innerHTML = aluno.nota1;
+            document.getElementById("infonota2").innerHTML = aluno.nota2;
+            document.getElementById("infonota3").innerHTML = aluno.nota3;
+
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

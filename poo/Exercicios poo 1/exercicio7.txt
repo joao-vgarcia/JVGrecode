@@ -1,0 +1,34 @@
+class Consorcio {
+    pagas: number;
+    total: number;
+    valor: number;
+
+    constructor(ttotal: number, ppagas:number, vvalor: number) {
+        this.pagas = ppagas;
+        this.total = ttotal;
+        this.valor = vvalor
+    }
+
+    deve(): string {
+        let n1 = this.pagas;
+        let n2 = this.total;
+        let n3 = this.valor;
+        let n4 = 0
+        n4 =(n2 * n3) - (n1 * n3)
+        return "Ainda deve R$: " + n4
+    }
+    pago():string {
+        let n1 = this.pagas;
+        let n2 = this.total;
+        let n3 = this.valor;
+        let n4 = 0
+        n4 = (n1 * n3)
+        return "Já foi pago R$: "+ n4
+
+    }
+
+}
+let teste: Consorcio = new Consorcio(10, 1,600);
+
+alert(teste.deve())
+alert(teste.pago())

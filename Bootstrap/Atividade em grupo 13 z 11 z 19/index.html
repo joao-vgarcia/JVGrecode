@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sistema de Caixa</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">
+              <img src="https://staticz.com.br/img/new-img/logos/logo-icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+              Pagamento 
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Carrinho</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="jumbotron">
+                <div class="form-group col-xs-12 col-sm-12">
+                    <h2>Produtos em promoção</h2>
+                    <h5>Aproveite nossos descontos de Black Friday!</h5>
+                    <div class="form-group">
+                        <select class="form-control" id="opc">
+                            <option >-- Selecione o produto --</option>
+                            <option>Lampada</option>
+                            <option>Cabos</option>
+                            <option>Tomada</option>
+                            <option>Disjuntor</option>
+                            <option>Fusivel</option>
+                            <option>Cimento</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                    <hr>
+
+                    <div style="text-align: right;">
+                            <button type="button" class="btn btn-primary" onclick="compra()">Adicionar produto</button>
+                    </div>
+
+                    <div style="padding: 25px;" class="jumbotron form-group col-md-12">
+                        <label>Valor do produto</label>
+                        <input style="background-color: #e5e5e5;" type="text" class="form-control" id="prev">
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group col-xs-12 col-sm-12">
+                        <h2>Verificar desconto</h2>
+                        <div class="form-group">
+                            <select class="form-control" id="opc1">
+                                <option>-- Desconto? --</option>
+                                <option>5</option>
+                                <option>7</option>
+                                <option>10</option>
+                                <option>12</option>
+                                <option>15</option>
+                                <option>20</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div style="text-align: right;">
+                        <button type="button" class="btn btn-primary" onclick="desconto()">Aplicar desconto</button>
+                    </div>
+
+                    <hr>
+
+                    <div style="padding: 25px;" class="jumbotron form-group col-md-12">
+                        <label>Valor com desconto</label>
+                        <input style="background-color: #e5e5e5;" type="text" class="form-control" id="resultado">
+                    </div>
+
+                
+                
+            </div>
+        </div>
+
+        <!-- Linkando bibliotecas -->
+        <script src="js/script.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

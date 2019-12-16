@@ -1,0 +1,43 @@
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+
+import './style.css';
+
+class App extends Component {
+   tilt ='Desenvolvedor Full-stack'
+   para_um='Objetivo: '
+   para_dois='Aprender a tecnologias incríveis para construir coisas magníficas '
+   para_tres='Tecnologias aprendidas: '
+   para_quatr='Javascript, Typescript, ReactJS, Angular entre outras'
+   titu = this.getTitulo(this.tilt)
+   paragrafo_um=this.getParagrafo(this.para_um, this.para_dois)
+   paragrafo_dois=this.getParagrafo(this.para_tres,this.para_quatr)
+
+    getTitulo(a){
+      return <h1>{a}</h1>
+    }
+    getParagrafo(a,b){
+      return <p><b>{a}</b>{b}</p>
+    }
+    
+    
+  
+  
+
+  render() {
+    return (
+    <div>
+    {this.titu}{this.paragrafo_um}{this.paragrafo_dois}
+   
+    </div>
+    );
+  }
+}
+
+render(<App />, document.getElementById('root'));
+
+
+
+
+
+https://stackblitz.com/edit/react-7y9vcj

@@ -1,0 +1,41 @@
+#navbuton{
+    background-color: #0A4C77;
+    color:white;
+    font-size: 120%;
+    width: 175px;
+    height: 52px;
+    border: #0A4C77 solid 1px;
+    margin-left: 15px;
+   
+}
+#navbutonlink{
+    color:white;
+}
+#navbutonlinkk{
+    color:black;
+}
+#navbuton:hover{
+    color: black;
+    font-size: 19px;
+}
+#entrarbuton{ 
+    border: black solid 1px;
+    color:white;
+    font-size: 120%;
+    width: 175px;
+    height: 52px;
+    margin-left: 15px; 
+}
+#entrarbuton:hover{
+    color: black;
+    font-size: 19px;
+}
+#lilink{
+    color:black;
+}
+#navllink:hover{
+    color:blue;
+}
+#alfa{
+    padding-left: 40px;
+}

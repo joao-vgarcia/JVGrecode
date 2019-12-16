@@ -1,0 +1,28 @@
+class Rio{
+    bruto: number;
+    pres: number ;
+    
+
+    constructor(salario:number, parcela:number) {
+        this.bruto = salario;
+        this.pres = parcela;
+
+    }
+   
+    verifica(): string{
+        let n1 = this.bruto;
+        let n2 = this.pres;
+        let n3 = n1 * 0.3;
+
+        if (n2< n3) {
+           return "Emprestimo concedido"
+        } else {
+           return "Emprestimo negado"
+        }
+
+    }
+   
+}
+let teste: Rio = new Rio(1000, 100);
+
+alert(teste.verifica())

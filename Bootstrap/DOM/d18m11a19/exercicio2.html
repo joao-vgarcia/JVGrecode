@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>Exercicio 2</title>
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1>Calcule</h1>
+    </div>
+    <div class="container">
+
+        <form>
+            <div class="form-row">
+                <div class="form-group col-xs-12 col-sm-6">
+                    <label>Digite um número</label>
+                    <input type="text" class="form-control" id="numero1" placeholder="Nome" required>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6">
+                    <label>Digite outro número</label>
+                    <input type="text" class="form-control" id="numero2" placeholder="Sobrenome" required>
+                </div>
+            </div>
+            <div class="form-group col-xs-12 col-sm-12">
+                <div class="form-group">
+                    <select class="form-control" id="opc">
+                        <option>--Selecione a operação</option>
+                        <option>pi</option>
+                        <option>potencia</option>
+                        <option>raiz quadrada</option>
+                        <option>dividir</option>
+                        <option>multiplicar</option>
+                        <option>somar</option>
+                        <option>subtrair</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-primary btn-block" type="button" onclick=" calc() ">Calcular</button>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-12">
+                    <label>Resultado</label>
+                    <p id="result"></p>
+                    <p id="result2"></p>
+                    <p id="result3"></p>
+                </div>
+            </div>
+        </form>
+<script>
+    function calc(){
+        var op = document.getElementById("opc").value
+        var n1 = Number(document.getElementById("numero1").value)
+        var n2 = Number(document.getElementById("numero2").value)
+        var resultado = 0
+        var resultado1 =0
+        var resultado2=0
+        var resultado3=0
+        if(op == "somar"){
+            resultado = n1 + n2
+            document.getElementById("result").innerText = resultado
+        }else if(op == "subtrair"){
+            resultado = n1 - n2
+            document.getElementById("result").innerText = resultado
+        }else if(op == "multiplicar"){
+            resultado = n1 * n2
+            document.getElementById("result").innerText = resultado
+        }else if(op == "dividir"){
+            resultado = n1 / n2
+            resultado1 = Math.floor(resultado)
+            resultado2=Math.ceil(resultado)
+            document.getElementById("result").innerText = resultado
+            document.getElementById("result2").innerText = resultado1
+            document.getElementById("result3").innerText = resultado2
+
+        }else if(op == "raiz quadrada"){
+            resultado = Math.sqrt(n1)
+            resultado1= Math.sqrt(n2)
+            document.getElementById("result").innerText = resultado
+            document.getElementById("result2").innerText = resultado1
+        }else if(op == "potencia"){
+            resultado = Math.pow(n1,n2)
+            document.getElementById("result").innerText = resultado
+        }else if(op == "pi"){
+            resultado = Math.PI
+            document.getElementById("result").innerText = resultado
+        }
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

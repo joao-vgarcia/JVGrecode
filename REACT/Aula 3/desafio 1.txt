@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dasafio</title>
+</head>
+
+<body>
+    <div id="c"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+        class App extends React.Component {
+
+            render() {
+                return (
+                    <div>
+                        <Conteudo />
+                    </div>
+
+                )
+            }
+        }
+
+        class Conteudo extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    um_nome: "João",
+                    dois_nome: "Ana",
+                    tres_nome: "Carlos"
+                }
+            }
+
+            mudarNomeUm = () => {
+                this.setState({ um_nome: "Ribeiro" })
+            }
+            mudarNomeDois = () => {
+                this.setState({ dois_nome: "Catarina" })
+            }
+            mudarNomeTres = () => {
+                this.setState({ tres_nome: "Antonio" })
+            }
+
+            render() {
+                return (
+                    <div>
+                        <h1>{this.state.um_nome}</h1><button type="button" onClick={this.mudarNomeUm}>Alterar</button>
+                        <h1>{this.state.dois_nome}</h1><button type="button" onClick={this.mudarNomeDois}>Alterar</button>
+                        <h1>{this.state.tres_nome}</h1><button type="button" onClick={this.mudarNomeTres}>Alterar</button>
+
+                    </div>
+                )
+            }
+
+        }
+        ReactDOM.render(<App />, document.getElementById('c'));
+    </script>
+
+</body>
+
+</html>

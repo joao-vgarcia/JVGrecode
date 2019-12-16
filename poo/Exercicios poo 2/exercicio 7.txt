@@ -1,0 +1,26 @@
+class Problema {
+    vetor: Array<number> = [];
+    leia: number;
+    cres: Array<number> = [];
+    decr: Array<number> = [];
+    constructor() {
+        this.leia = Number(prompt(`Digite quantos números quer ler`))
+    }
+
+    lervetor(): void {
+        for (let i = 0; i < this.leia; i++) {
+            this.vetor[i] = Number(prompt(`Digite o ${i + 1}º número`))
+        }
+    }
+    apresentar(): string{
+        return `O vetor em ordem crescente${this.vetor.sort(function (a: number, b: number): number{ return(a-b)})} \n O vetor em ordem decrescente é ${this.vetor.reverse()}`
+    }
+
+
+
+
+}
+
+let teste: Problema = new Problema();
+teste.lervetor();
+alert(teste.apresentar());

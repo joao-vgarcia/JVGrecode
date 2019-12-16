@@ -1,0 +1,29 @@
+class Total{
+    val1: number = 0;
+    val2: number = 0;
+    maior: number = 0;
+
+    constructor() {
+      
+    }
+    receber(valor1: number, valor2:number): void{
+        this.val1 = valor1;
+        this.val2 = valor2;
+        if (valor1> valor2) {
+            this.maior = valor1;
+        } else {
+            this.maior = valor2;
+        }
+
+    }
+    parimpar():string {
+        if (this.maior %2 == 0) {
+            return "O número é par" + " " + this.maior
+        } else {
+            return "O número é ímpar" + " " + this.maior
+        }
+    }
+}
+let teste: Total = new Total();
+teste.receber(8, 2)
+alert(teste.parimpar())
