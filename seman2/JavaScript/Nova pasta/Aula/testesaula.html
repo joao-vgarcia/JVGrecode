@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testando logica</title>
+    <style>
+        body{
+            background-color: black;
+            font-size: 20pt;
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //exercicio 1
+/*      var n1 = Number(window.prompt("Digite um número"))
+        if(n1 >= 5 ){
+            document.write("O número digitado é maior que 5")
+        }else{
+            document.write("O número é menor que 5")
+        }
+*/
+
+        //exercicio 2
+/*        
+        var n1 = Number(prompt("Digite o primeiro número"))
+        var n2 = Number(prompt("Digite o segundo número"))
+        if(n1 >= n2){
+            var res = n1 + 15
+            document.write(res)
+        }else{
+            var res = n2 -3
+            document.write(res)
+        }
+*/      
+
+        //exercicio 3
+/*
+        var saldo = Number.parseFloat(prompt(`Digite o saldo bancário`))
+        var nome = prompt(`Digite o nome do cliente`)
+        if(saldo > 0){
+            document.write(`O cliente ${nome} tem um saldo de ${saldo}`)
+        }else{
+            document.write(`O cliente não tem saldo`)
+        }
+*/
+
+        //exercico 4
+/*        
+        var n1 = Number(prompt("Digite um número"))
+        var n2 = Number(prompt("Digite o segundo número"))
+        var res = n1 + n2
+        if(res > 20){
+            res = res + 8
+            document.write(`O valor do resultado é   ${res}`)
+        }else{
+            res = res - 5
+            document.write(`O valor do resultado é   ${res}`)
+        }
+*/
+
+        // exercicio 5
+/*
+        var idade = Number.parseInt(prompt("Digite a idade do nadador"))
+        if(idade >= 5 && idade <=7){
+            document.write(`O nadador é categoria A`)
+        }else if (idade >= 8 && idade <= 10){
+            document.write(`Categoria do nadador é B`)
+        }else if(idade >= 11 && idade <= 13){
+            document.write(`Categoria do nadador é C`)
+        }else if(idade >= 14 && idade<= 18){
+            document.write("Categoria D")
+        }else if (idade>18){
+            document.write(`Categoria E`)
+        }else {
+            document.write(`Idade inválida`)
+        }
+*/
+
+        //exercicio 6
+/*
+        alert("Linha de crédito da prefeitura")
+        var salario = Number(prompt("Digite o valor do salário"))
+        var empr = Number(prompt("Digite o valor do empréstimo solicitado"))
+        var total = salario*0.3
+        if(empr > total){
+            document.write("Empréstimo não concedido")
+        }else{
+            document.write("Empréstimo concedido")
+        }
+
+*/
+
+        //exercicio 7
+/*
+        alert("Boletim escolar")
+        var nota1 = Number(prompt("Digite a primeira nota"))
+        var nota2 = Number(prompt("Digite a segunda nota"))
+        var nota3 = Number(prompt("Digite a terceira nota"))
+        var nota4 = Number(prompt("Digite a quarta nota"))
+        var media = (nota1 + nota2 + nota3 + nota4) /4
+        if(media >= 5){
+            document.write(`o aluno passou com média ${media}`)
+        }else{
+            document.write(`o aluno foi reprovado com média ${media}`)
+        }
+*/
+
+        //exercicio 8
+/*
+        alert("Boletim 2")
+        var nota1 = Number(prompt("Digite a primeira nota"))
+        var nota2 = Number(prompt("Digite a segunda nota"))
+        var nota3 = Number(prompt("Digite a terceira nota"))
+        var nota4 = Number(prompt("Digite a quarta nota"))
+        var media = (nota1 + nota2 + nota3 + nota4) /4
+
+        if(media >= 7){
+            document.write(`O aluno foi aprovado com média ${media}`)
+        }else if (media < 7 ){
+            alert("O aluno precisa fazer recuperação")
+            var nota5 = Number(prompt("Digite o valor do exame"))
+            media = (nota1 + nota2 + nota3 +nota4 + nota5 )/5
+            if(media >= 5 ){
+                document.write(`O aluno foi aprovado na recuperação com média ${media}`)
+            }else {
+                document.write(`O aluno não foi aprovado, sua média final foi ${media}`)
+            }
+        }
+ */
+
+        //exercicio 9
+/*
+        alert("Aumento de salário")
+        var nome = prompt("Digite seu nome")
+        var cargo = Number(prompt("Digite o código do seu cargo"))
+        var salario = Number(prompt("Digite o valor do seu salário"))
+        if(cargo == 1){
+            salario = (salario*0.1)+salario 
+            document.write(`${nome} , seu novo salário com reajuste passa a ser ${salario}`)
+        }else if(cargo == 2){
+            salario = (salario *0.075) + salario
+            document.write(`${nome} , seu novo salário com reajuste passa a ser ${salario}`)
+        }else if (cargo == 3){
+            salario = (salario*0.05) + salario
+            document.write(`${nome} , seu novo salário com reajuste passa a ser ${salario}`)
+        }else if(cargo == 4){
+            salario = (salario *0.15) + salario
+            document.write(`${nome} , seu novo salário com reajuste passa a ser ${salario}`)
+        }else{
+            document.write(`Cargo inválido ${cargo}`)
+        }
+*/
+
+        //exercicio 10
+/*
+        alert(`Preço do combustível`)
+        var comb = prompt("Digite o tipo de combustível")
+        var litros = Number(prompt("Digite a quantidade de litros"))
+        var desconto = 0
+        if(comb == "A" || comb == "alcool" || comb == "a"){
+            if(litros <= 20){
+                var total = litros *1.9
+                desconto = total - (total *0.03)
+                document.write(`O valor total é de ${total} <br/>`)
+                document.write(`O valor com desconto é de ${desconto}`)
+            }else if (litros   > 20){
+                
+                var total = litros *1.9
+                desconto = total - (total *0.05)
+                document.write(`O valor total é de ${total} <br/>`)
+                document.write(`O valor com desconto é de ${desconto}`)
+            }
+        }else if( comb == "G" || comb == "gasolina" || comb == "g"){
+            if(litros <=20){
+            var total = litros *2.5
+                desconto = total - (total *0.04)
+                document.write(`O valor total é de ${total} <br/>`)
+                document.write(`O valor com desconto é de ${desconto}`)
+            }else if(litros >20){
+                
+                var total = litros *2.5
+                desconto = total - (total *0.06)
+                document.write(`O valor total é de ${total} <br/>`)
+                document.write(`O valor com desconto é de ${desconto}`)
+            }
+        }
+*/
+
+        //exercicio 11
+/*
+        alert("Números")
+        var n1 = Number(prompt("Digite um número"))
+        if(n1 <= 9){
+            alert("O número está dentro da faixa permitida")
+        }else{
+            alert("O número está fora da faixa permitida")
+        }
+*/
+
+        //exercicio 12
+        /*
+        alert("Loja")
+        var codigo = Number(prompt("Digite o código do produto"))
+        if(codigo == 1){
+            document.write("Alimento não perecível")
+        }else if(codigo >=2 && codigo <= 4 ){
+            document.write("Alimento perecível")
+        }else if (codigo ==5 || codigo ==6){
+            document.write("Vestuário")
+        }else if (codigo >=7 && codigo <= 15){
+            document.write("Higiene pessoal")
+        }else{
+            document.write("Codigo inválido")
+        }
+        */
+
+        //exercicio 13
+/*
+        alert("Calculo de média")        
+        var n1 = Number(prompt("Digite um número"))
+        var n2 = Number(prompt("Digite um número"))
+        var n3 = Number(prompt("Digite um número"))
+        var n4 = Number(prompt("Digite um número"))
+        var n5 = Number(prompt("Digite um número"))
+        var media = (n1 + n2 + n3 + n4 + n5)/5
+        if(n1 > media){
+            document.write(`O número ${n1} está acima da média <br/> `)
+        }
+        if(n2 > media){
+            document.write(`O número ${n2} está acima da média <br/> `)
+        }
+        if(n3 > media){
+            document.write(`O número ${n3} está acima da média <br/> `)
+        }
+        if(n4 > media){
+            document.write(`O número ${n4} está acima da média <br/> `)
+        }
+        if(n5 > media){
+            document.write(`O número ${n5} está acima da média <br/> `)
+        }
+*/
+        // teste de for
+        /*
+        for(x = 1; x <=10; x++){
+           document.writeln(`Número ${x} <br/>`)
+        }
+        */
+
+        // exercicio 14
+/*
+        alert("Cálculo de peso ideal")
+        var sexo = prompt("Para homem digite 'h' e para mulher digite 'm'")
+        var altura = Number(prompt("Digite sua altura em cm"))
+        var peso = Number(prompt("Digite seu peso"))
+        var total = peso / ((altura *altura)/100 ) 
+
+        if(total < 18.5){
+
+        }
+  */      
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

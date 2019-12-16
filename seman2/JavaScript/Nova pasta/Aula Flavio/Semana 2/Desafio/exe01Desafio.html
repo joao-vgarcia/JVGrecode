@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio em equipe</title>
+</head>
+<body>
+    <script>
+        //Exercicio 1
+        
+        var tipo = prompt("Para álcool digite A e gasolina G")
+        var litros = Number(prompt("Digite quantos litros você abasteceu"))
+        
+        
+        function gasolina(litro){
+            var valor = 0
+            if(litro <= 20){
+                litro = litro *3.30
+                valor = litro - (litro*0.04) 
+            }else{
+                litro = litro *3.30
+                valor = litro - (litro*0.06)
+
+            }
+            return valor
+        }
+        
+        function alcool (litro){
+            var valor = 0
+            if(litro <= 20){
+                litro = litro *2.90
+                valor = litro - (litro*0.03) 
+            }else{
+                litro = litro *2.90
+                valor = litro - (litro*0.05)
+
+            }
+            return valor
+
+        }
+
+
+        if(tipo == "A" || tipo == "a"){
+            document.write(   alcool(litros))
+
+        }else if (tipo == "g" || tipo == "G"){
+            document.write(   gasolina(litros))
+        }
+        
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

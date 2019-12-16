@@ -1,0 +1,71 @@
+1 - Ler uma temperatura em graus centígrados e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é:F = 9 ·c + 160 onde F é a temperatura em  Fahrenheit e C é a temperatura em centígrados. 
+
+2 - Criar um algoritmo que efetue o cálculo do salário líquido de um professor. Os dados fornecidos serão: valor da hora aula, número de aulas dadas no mês e percentual de desconto do INSS 
+
+
+3 - Em épocas de pouco dinheiro, os comerciantes estão procurando aumentar suas vendas oferecendo desconto. Faça um algoritmo que possa entrar com o valor de um produto e imprima o novo valor tendo em vista que o desconto foi de 9%. 
+
+
+4 - Todo restaurante, embora por lei não possa obrigar o cliente a pagar, cobra 10% para o garçom. Fazer um algoritmo que leia o valor gasto com despesas realizadas em um restaurante e imprima o valor total com a gorjeta 
+
+
+5 - Para vários tributos, a base de cálculo é o salário mínimo. Fazer um algoritmo que leia o valor do salário mínimo e o valor do salário de uma pessoa. Calcular e imprimir quantos salários mínimos ela ganha. 
+
+
+
+6 - Criar um algoritmo que leia a quantidade de fitas que uma locadora de vídeo possui e o valor que ela cobra por cada aluguel, mostrando as informações pedidas a seguir: 
+
+• Sabendo que um terço das fitas são alugadas por mês, exiba o faturamento anual da locadora; 
+• Quando o cliente atrasa a entrega, é cobrada uma multa de 10% sobre o valor do aluguel. Sabendo que um décimo das fitas alugadas no mês são devolvidas com atraso, calcule o valor ganho com multas por mês; 
+• Sabendo ainda que 2% de fitas se estragam ao longo do ano, e um décimo do total é comprado para reposição, exiba a quantidade de fitas que a locadora terá no final do ano. 
+
+
+
+
+7 - Entrar com um número e imprimi-lo caso seja maior que 20. 
+
+
+8 - Construir um algoritmo que leia dois valores numéricos inteiros e efetue a adição; caso o resultado seja maior que 10, apresentá-lo. 
+
+
+9 - Construir um algoritmo que leia dois números e efetue a adição. Caso o valor somado seja maior que 20, este deverá ser apresentado somando-se a ele mais 8; caso o valor somado seja menor ou igual a 20, este deverá ser apresentado subtraindo-se 5. 
+
+
+10 - Entrar com um número e informar se ele é ou não divisível por 5. 
+
+11 - Entrar com um número e informar se ele é divisível por 3 e por 7. 
+
+12 - A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário bruto. Fazer um algoritmo que permita entrar com o salário bruto e o valor da prestação e informar se o empréstimo pode ou não ser concedido 
+
+13 - Entrar com a sigla do estado de uma pessoa e imprimir uma das mensagens: 
+• carioca 
+• paulista 
+• mineiro 
+• outros estados 
+
+
+14 - Entrar com três números e imprimi-los em ordem decrescente (suponha números diferentes). 
+
+
+15 - Imprimir os múltiplos de 5, no intervalo de 1 até 500 
+
+
+16 - Criar um algoritmo que imprima a soma dos números pares entre 25 e 200 
+
+
+
+
+17 - Criar um algoritmo que leia um número que será o limite superior de um intervalo e o incremento (incr). Imprimir todos os números naturais no intervalo de O até esse número. Suponha que os dois números lidos são maiores do que zero. Limite superior: 20 Incremento: 5 Saída: O 5 1 O 15 20 
+
+
+
+
+
+
+18 - Criar um algoritmo que leia um número (num) e imprima a soma dos números múltiplos de 5 no intervalo aberto entre 1 e num. Suponha que num será maior que zero. Limite superior: 15 ( 5 10) - múltiplos de 5 Saída: 15 
+
+
+
+
+
+19 - Criar um algoritmo que leia a quantidade de números que se deseja digitar para que possa ser impresso o maior e o menor número digitados. Não suponha que todos os números lidos serão positivos 

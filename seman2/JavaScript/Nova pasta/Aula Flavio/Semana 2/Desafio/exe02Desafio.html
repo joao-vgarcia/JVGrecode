@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio em equipe</title>
+</head>
+<body>
+    <script>
+        
+
+        //Exercicio 2
+        var nome = 0
+        var idade = 0
+        var sexo = 0
+        var menor = 0
+        var sss =0
+
+        function defineSexo(sex){
+            var q =0
+            
+            if(sex == "m" || sex == "M"){
+                sex = "Masculino"
+                q= 1
+                return q
+            }else{
+                sex = "Feminino"
+                q =0
+                return q
+
+            }
+
+
+        }
+
+        function defineIdade(id){
+            var a =0
+
+            if(id <= 17){
+                a =1
+                return a
+
+            }else{
+                a =0
+                return a
+
+            }
+        }
+
+    
+
+        for(i = 1; i<= 10; i++){
+          nome = prompt(`Digie o nome da pessoa`)
+          idade = Number(prompt(`Digite quantos anos tem`))
+          sexo = prompt(`Digite o sexo`)
+          menor += defineIdade(idade)
+          sss += defineSexo(sexo)
+        }
+
+        document.write(`Existem ${menor} pessoas menores de idade e ${10 - menor} pessoas maior de idade <br/>`)
+        document.write(`Existem ${sss} pessoas do sexo Masculino e ${10 - sss} pessoas do sexo feminino`)
+          
+        
+       
+        
+       
+       
+    
+    
+    
+    </script>
+    
+</body>
+</html>

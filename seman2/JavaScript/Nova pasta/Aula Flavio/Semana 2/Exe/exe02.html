@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var haula = Number(prompt("Digite o valor da hora / aula"))
+        var aulad = Number(prompt("Digite quantas aulas ele dá no mês"))
+        var inss = Number(prompt("Digite quanto ele perde pro inss"))
+
+        function calSalLiq(ha, ad, is){
+            var total = (ha * ad)
+            total = total - (total * (is/100))
+            
+            return total
+        }
+        document.write(`O salário líquido é ${calSalLiq(haula, aulad, inss)}`)
+
+    
+    
+    
+    </script>
+    
+</body>
+</html>

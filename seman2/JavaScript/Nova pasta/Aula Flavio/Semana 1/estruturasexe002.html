@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estruturas de repetição</title>
+    <style>
+        body{
+            background-color: darkkhaki;
+            font-size: 20pt;
+            color:rgb(0, 19, 9);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        
+        var entrada = 0
+        var resultado = 0
+     /*   while(entrada != "fim"){
+            n1 = Number(prompt("Digite um número"))
+            resultado = resultado + n1
+            alert(`A soma é ${resultado} `)
+            entrada = prompt(`Para sair digite fim`)
+
+        }
+        */
+        /*
+        do{
+            n1 = Number(prompt("Digite um numero"))
+            resultado = resultado + n1
+            alert(`A soma até agora é de ${resultado}`)
+            entrada = prompt("Para sair digite fim")
+        }while(entrada != "fim")
+        */
+
+        for(entrada = " "; entrada != "fim"; ){
+            entrada = prompt("Digite um numero \nPara sair digite fim")
+            if(entrada == "fim"){
+                alert(`A soma é \n ${resultado} \nFim do programa`)
+            }else if(isNaN(entrada)){
+                alert("Digite um número")
+
+            }else{
+                entrada = Number(entrada)
+                resultado = resultado + entrada
+                alert(`A soma até agora é de ${resultado}`)
+               
+            }
+          
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

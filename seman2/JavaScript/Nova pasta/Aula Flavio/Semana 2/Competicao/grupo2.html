@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var escolaridade
+        var idade 
+        var ingles 
+        var maior =0
+        var soma =0
+        var x =0
+        var numeroC = Number(prompt("Digite quantos candidatos"))
+
+        function escola(es){
+            if(es == "medio"){
+                return 30
+            }else if(es == "superior"){
+                return 40
+            }else if(es == "mestrado"){
+                return 50
+            }
+        }
+        function calIdade(id){
+            if(id >=18 && id <=25){
+                return 50
+            }else if(id >25 && id <= 30){
+                return 40
+            }else if(id > 30){
+                return 30
+            }
+        }
+        function nivIngl(ing){
+            if(ing == "basico"){
+                return 20
+            }else if(ing == "intermediario"){
+                return 30
+            }else if(ing == "avancado"){
+                return 40
+            }else if(ing == "fluente"){
+                return 50
+            }
+        }
+        
+        for(i =1 ; i<= numeroC; i++){
+            escolaridade = prompt("Digite a escolaridade")
+            idade = Number(prompt("Digite a idade"))
+            ingles = prompt("Digite o nivel de ingles")
+            var a = Number(escola(escolaridade))
+            var b = Number(calIdade(idade))
+            var c = Number(nivIngl(ingles))
+
+            soma = a + b + c
+
+            if(soma >= 100){
+                x +=1
+            }
+            if(soma > maior){
+                maior = soma
+            }
+
+        }
+        document.write(`Existem ${x} candidatos com pontuação maior ou igual a 100 <br/>`)
+        document.write(`O candidato com maior pontuação foi ${maior}`)
+
+
+      
+    
+    </script>
+</body>
+</html>

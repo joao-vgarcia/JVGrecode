@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var estado = prompt("Digite a sigla do seu estado")
+        function verifica(est){
+            if(est == "sp" || est == "SP"){
+                return "Paulista"
+            }else if(est == "rj" || est == "RJ"){
+                return "Carioca"
+            }else if(est == "MG" || est == "mg"){
+                return "Mineiro"
+            }else{
+                return "de outros estados"
+            }
+        }   
+
+        document.write(`Você é ${verifica(estado)}`)
+    
+    </script>
+</body>
+</html>

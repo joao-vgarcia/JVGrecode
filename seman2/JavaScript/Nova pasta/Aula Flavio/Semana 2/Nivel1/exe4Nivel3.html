@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Semana 2</title>
+    
+</head>
+<body>  
+    <script>
+        //Exercicio 4 Nível 3
+
+        var estoque = Number(prompt(`Digite a quantidade de coisas em estoque`))
+        var preco = 0
+        var total = 0
+        
+        i =0
+        for(i = 1; i<=estoque; i++){
+            preco = Number(prompt(`Digite o valor da ${i}º mercadoria`))
+            total = total + preco
+
+        }
+        document.write(`O valor total das coisas em estoque é de ${total} <br/> A média dos valores das mercadorias é de ${(total / estoque)}`)
+
+
+
+    </script>
+    
+</body>
+</html>

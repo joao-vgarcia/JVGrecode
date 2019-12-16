@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var salbruto = Number.parseFloat(prompt("Digite o valor do salário"))
+    var prest = Number.parseFloat(prompt("Digite o valor da prestação desejada"))
+    
+    function valida(bru, p){
+        var porc = bru *0.3
+        if(p <= porc){
+            return "FOI CONCEDIDO"
+        }else{
+            return "NÃO FOI CONCEDIDO"
+        }
+    }
+
+    document.write(`O seu empréstimo ${valida(salbruto, prest)}`)
+    </script>
+    
+</body>
+</html>

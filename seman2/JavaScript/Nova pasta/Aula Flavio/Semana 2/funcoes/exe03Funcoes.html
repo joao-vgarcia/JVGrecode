@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funções</title>
+    <style>
+        body{
+            background-color:black;
+            font-size: 20pt;
+            color: cornsilk;
+        }
+    </style>
+    
+</head>
+<body>
+    <script>
+
+
+        //Exercicio 3
+        
+        var saldo = Number(prompt("Digite o seu saldo atual"))
+        var cheque = Number(prompt("Digite o valor do cheque"))
+        
+        function conta(dinheiro, desconto){
+            
+            if(desconto > dinheiro){
+                return "Não existe saldo suficiente"
+            }else{
+                dinheiro = dinheiro -desconto
+                return "Seu saldo atual é de: " + dinheiro
+            }
+        }
+
+        document.write(conta(saldo,cheque))
+        
+                 </script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        font: normal 29pt Arial;
+    }
+    </style>
+</head>
+<body>
+    <script>
+        /*
+    window.alert("Teste")
+    var nome = window.prompt("Digite um nome")
+    var idade = Number.parseInt(window.prompt("Digite uma idade"))    
+    var nota = Number(window.prompt("Digite a nota"))
+
+    document.writeln(`O aluno ${nome} com ${idade} anos tirou a nota ${nota}`)
+    */
+
+    window.alert("Jogo da mega sena")
+    var n1= Number( window.prompt("Digite o número 1")) 
+    var n2= Number( window.prompt("Digite o número 2"))
+    var n3= Number( window.prompt("Digite o número 3"))
+    var n4= Number( window.prompt("Digite o número 4"))
+    var n5= Number( window.prompt("Digite o número 5"))
+    var n6= Number( window.prompt("Digite o número 6"))
+
+    var re1 = Math.floor(Math.random()*10)
+    var re2 = Math.floor(Math.random()*10)
+    
+    var re3 = Math.floor(Math.random()*10)
+    var re4 = Math.floor(Math.random()*10)
+    
+    var re5 = Math.floor(Math.random()*10)
+    var re6 = Math.floor(Math.random()*10)
+
+    if(re1 == 0 || re1 == re2 || re1 == re3 || re1 == re4 || re1 == re5 || re1 == re6){
+        re1 = Math.floor(Math.random()*10)
+    }
+    if(re2 == 0 || re2 == re1 || re2 == re3 || re2 == re4 || re2 == re5 || re2 == re6){
+        re2 = Math.floor(Math.random()*10)
+    }
+    if(re3 == 0 || re3 == re2 || re3 == re1 || re3 == re4 || re3 == re5 || re3 == re6){
+        re3 = Math.floor(Math.random() * 10)
+    }
+    if(re4 == 0 || re4 == re2 || re4 == re3 || re4 == re1 || re4 == re5 || re4 == re6){
+        re4 = Math.floor(Math.random() * 10)
+    }
+    if(re5 == 0 || re5 == re2 || re5 == re3 || re5 == re4 || re5 == re6 || re5 == re1){
+        re5 = Math.floor(Math.random() * 10)
+    }
+
+
+    document.writeln(`${re1}  ${re2}  ${re3}  ${re4}  ${re5}  ${re6} <br/>`)
+    
+    document.writeln(`${n1}  ${n2}  ${n3}  ${n4}  ${n5}  ${n6} <br/>`)
+
+    if(re1 == n1 || re1 == n2|| re1 == n3 || re1 == n4 || re1 == n5 || re1 == n6){
+        document.writeln(`Acertou o ${re1} <br/>`)
+    }
+    if(re2 == n1 || re2 == n2|| re2 == n3 || re2 == n4 || re2 == n5 || re2 == n6){
+        document.writeln(`Acertou o ${re2} <br/>`)
+    }
+    if(re3 == n1 || re3 == n2|| re3 == n3 || re3 == n4 || re3 == n5 || re3 == n6){
+        document.writeln(`Acertou o ${re3} <br/>`)
+    }
+    if(re4 == n1 || re4 == n2|| re4 == n3 || re4 == n4 || re4 == n5 || re4 == n6){
+        document.writeln(`Acertou o ${re4} <br/>`)
+    }
+    if(re5 == n1 || re5 == n2|| re5 == n3 || re5 == n4 || re5 == n5 || re5 == n6){
+        document.writeln(`Acertou o ${re5} <br/>`)
+    }
+    if(re6 == n1 || re6 == n2|| re6 == n3 || re6 == n4 || re6 == n5 || re6 == n6){
+        document.writeln(`Acertou o ${re6} <br/>`)
+    }
+
+
+    
+
+    </script>
+</body>
+</html>

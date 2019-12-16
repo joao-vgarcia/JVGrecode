@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funções</title>
+    <style>
+        body{
+            background-color:black;
+            font-size: 20pt;
+            color: cornsilk;
+        }
+    </style>
+    
+</head>
+<body>
+    <script>
+
+        var exe = Number(prompt("Digite qual exercicio você quer fazer"))
+        //Exercicio 1 Funções
+        
+        
+        function atualizar(x){
+            var novoValor = 0
+            novoValor  = x + (x*0.25)
+            return novoValor
+        }
+
+        
+
+        //Exercicio 2
+        
+        
+      
+        function calc(x, y){
+            var idade = 0
+            idade = x - y
+            return idade
+        }
+
+        
+
+        //Exercicio 3
+        
+        
+        function conta(dinheiro, desconto){
+            
+            if(desconto > dinheiro){
+                return "Não existe saldo suficiente"
+            }else{
+                dinheiro = dinheiro -desconto
+                return "Seu saldo atual é de: " + dinheiro
+            }
+        }
+
+        
+
+        //Exercicio 4
+
+
+        function media(ate){
+            var med = 0
+            var total =0
+            for(i =15; i<= ate; i++){
+                med += i
+                total ++
+            }  
+
+            total = med / total
+            return total
+        }
+
+        //Aqui começa o programa
+        contador = 1
+        while(contador < 10){
+
+        if(exe == 1){
+            var valor = Number(prompt("Digite o valor do produto"))
+            document.write(`O valor do produto atualizado é ${atualizar(valor)}`)
+            contador = 32
+        }else if(exe == 2){
+            var ano = Number(prompt(`Digite o ano em que estamos`))
+            var nasc = Number(prompt(`Digite o ano de seu nascimento`))
+            document.write(`Sua idade é ${calc(ano,nasc)}`)
+            contador = 32
+
+        }else if(exe == 3){
+            var saldo = Number(prompt("Digite o seu saldo atual"))
+            var cheque = Number(prompt("Digite o valor do cheque"))
+            document.write(conta(saldo,cheque))
+            contador = 32
+    
+        }else if(exe == 4){
+            var final = Number(prompt("Digite onde você quer chegar"))
+            if(final <= 15){
+                final = Number(prompt("Digite um número maior que 15"))
+            
+            }else{
+                document.write(`A media dos números inteiros de 15 até ${final} é: ${media(final)}`)
+            }
+            contador = 32
+
+        }else{
+            exe = Number(prompt("Digite um número entre 1 e 4"))
+         }
+
+        }
+
+       
+        
+    
+    
+    
+    </script>
+
+</body>
+</html>

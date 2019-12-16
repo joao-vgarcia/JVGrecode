@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funções</title>
+    <style>
+        body{
+            background-color:black;
+            font-size: 20pt;
+            color: cornsilk;
+        }
+    </style>
+    
+</head>
+<body>
+    <script>
+
+
+        //Exercicio 4
+
+        var final = Number(prompt("Digite onde você quer chegar"))
+
+        function media(ate){
+            var med = 0
+            var total =0
+            for(i =15; i<= ate; i++){
+                med += i
+                total ++
+            }  
+
+            total = med / total
+            return total
+        }
+
+        if(final <= 15){
+            final = Number(prompt("Digite um número maior que 15"))
+            
+        }else{
+            document.write(`A media dos números inteiros de 15 até ${final} é: ${media(final)}`)
+        }
+
+        
+    
+    
+    
+
+
+
+
+
+
+                 </script>
+
+</body>
+</html>

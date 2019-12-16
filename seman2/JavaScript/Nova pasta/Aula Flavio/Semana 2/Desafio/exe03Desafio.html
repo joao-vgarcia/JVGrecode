@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio em equipe</title>
+</head>
+<body>
+    <script>
+        
+        //Exercicio 3
+        
+        var salFixo = Number(prompt("Digite o valor do salário fixo"))
+        var carVendido = Number(prompt("Digite quantos carros ele vendeu"))
+        var totalVendas = Number(prompt("Digite o valor total das vendas"))
+        var comCarro = Number(prompt("Digite a comissão que ele recebe por vender um carro"))
+        
+        
+        
+        function comissao(qdte, porc, tudo){
+            var varRetorno = 0
+            var novoSal = 0
+            porc = porc/100
+            varRetorno = (tudo / qdte) * porc
+            
+            novoSal = tudo * 0.05
+            novoSal = novoSal +varRetorno
+
+
+            return novoSal
+
+        }
+        document.write(`O salário dele é ${salFixo} e o salário com  a comissão é ${salFixo + comissao(carVendido, comCarro, totalVendas)} `)
+        
+
+    
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio individual</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+            font-size: 20pt;
+        }
+    </style>
+</head>
+<body>
+    <script>
+            alert("Desafio")
+           var nome = prompt("Digite seu nome")
+           var horas = Number(window.prompt( `Quer horas são?`))
+
+           if(horas >=6 && horas <12 ){
+                document.write(`Bom dia ${nome} `)
+           }else if (horas >= 12 && horas <= 18){
+                document.write(`Boa tarde ${nome}`)
+           }else if (horas >18 && horas <= 24){
+                document.write(`Boa noite ${nome}`)
+           }else if (horas < 6 || horas > 24){
+               document.write(`Está de madrugada ${nome}`)
+           }
+           
+        
+    </script>
+    
+</body>
+</html>

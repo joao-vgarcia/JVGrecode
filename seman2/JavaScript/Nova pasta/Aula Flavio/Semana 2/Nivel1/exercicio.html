@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Semana 2</title>
+    
+</head>
+<body>  
+    <script>
+        //Exercicio 5 Nível 3
+        var alvo = Number(prompt(`Digite quantos números quer digitar`))
+        var digitado = 0
+        var maior = 0
+        var menor = 0
+
+
+        for(i = 1; i<=alvo; i++){
+            digitado = Number(prompt(`Digite o ${i}º número`))
+
+            if(digitado > maior && digitado > menor){
+                maior =digitado
+            }else{
+                menor = digitado
+            }
+        }
+
+        document.write(`O maior número digitado é: ${maior} <br/>`)
+        
+        if(maior %2 == 0){
+            document.write(`E ele é par`)
+        }else{
+            document.write(`E ele é ímpar`)
+        }
+
+    </script>
+    
+</body>
+</html>

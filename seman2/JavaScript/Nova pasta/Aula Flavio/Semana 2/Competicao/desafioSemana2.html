@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sapato</title>
+</head>
+<body>
+    <script>
+        var saldo = Number.parseFloat(prompt("Digite quanto tem de crédito para comprar"))
+        var sapato = 0
+        var meia = 9
+        var carrinho =0
+        var quer
+        var resp =0
+
+        function imposto(x){
+            x = x*0.08
+            return x
+
+        }
+        
+        while(resp != "sim"){
+            sapato = Number(prompt("Digite o valor do sapato"))
+
+            if(carrinho < saldo && sapato <= saldo){
+
+                carrinho = carrinho + sapato + imposto(sapato)
+
+
+            }else if(carrinho >= saldo || sapato >saldo){
+                alert("Você não pode comprar mais")
+                resp = "sim"
+            }
+
+            if((carrinho+9) <saldo){
+                quer = prompt("Você quer comprar uma meia?")
+                if(quer == "sim"){
+                    carrinho += meia
+                }
+
+            }
+
+            resp = prompt("você quer sair?")
+
+        }
+        document.write(`O saldo total de sua compra mais impostos é de ${carrinho}`)
+
+    
+    </script>
+    
+</body>
+</html>

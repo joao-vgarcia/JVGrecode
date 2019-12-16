@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Semana 2</title>
+    
+</head>
+<body>  
+    <script>
+        //Exercicio 2 Nível 3
+        
+        var inicial = Number(prompt(`Digite onde quer começar`))
+        var final = Number(prompt(`Digite até onde quer chegar`))
+        var par = 0
+        var impar = 0
+        for(i = inicial; i<= final; i++){
+            if(i %2 == 0){
+                par = par +1
+
+            }else{
+                impar = impar +1
+            }
+        }
+        document.write(`Entre os números ${inicial} e ${final} existem <br/> ${par} números pares <br/> ${impar} números ímpares`)
+    </script>
+    
+</body>
+</html>

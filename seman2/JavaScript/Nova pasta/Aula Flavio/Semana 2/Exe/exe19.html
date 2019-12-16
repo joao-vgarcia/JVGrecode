@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var limite = Number(prompt("Digite quantos números quer digitar"))
+        var digitado =0
+        var maior =0
+        var menor = 0
+
+
+        
+        for(i = 1; i<= limite; i++){
+            digitado = Number(prompt(`Digite o ${i}º número`))
+
+         
+            if(digitado > maior && menor == 0){
+                maior = digitado
+                menor = digitado
+            }
+
+            if(digitado >= maior){
+                maior = digitado
+
+            }else if(digitado < menor){
+                menor = digitado
+            } 
+
+        }
+        document.write(`O maior número digitado é ${maior} <br/> E o menor número digitado é ${menor}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var qtdeFitas = Number.parseInt(prompt("Digite quantas fitas existem no total"))
+        var valorAlug = Number(prompt("Digite o valor do aluguel de cada fita"))
+
+        function caso1(qtd, val){
+            qtd = Number.parseInt(qtd/3)
+            var anual = (qtd * val)*12
+            return anual
+
+        }
+        function caso2(qtda, valora){
+            qtda = Number.parseInt(qtda / 3)
+            qtda = qtda /10
+            var multa = qtda * (valora * 0.1)
+            return multa
+        }
+        function caso3(qtda){
+            var estragada = Number.parseInt(qtda * 0.02)
+            var reposi = qtda /10
+            qtda = (qtda - estragada) + reposi
+            return qtda
+        }
+
+        document.write(`O valor do faturamento anual é de ${caso1(qtdeFitas, valorAlug)} <br/>`)
+        document.write(`O valor do lucro com a multa é de ${caso2(qtdeFitas, valorAlug)} <br/>`)
+        document.write(`A quantidade de fitas no fim do ano será de ${caso3(qtdeFitas)}`)
+
+
+    
+    </script>
+</body>
+</html>

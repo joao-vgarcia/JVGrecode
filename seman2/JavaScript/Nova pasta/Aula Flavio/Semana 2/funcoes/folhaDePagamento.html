@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trabalho em grupo</title>
+</head>
+<body>
+    <script>
+        //Exercicio 1
+        //Exercicio 2
+        
+
+        //Declaração de variáveis
+        var nome = prompt("Digite o nome do funcionário")
+        var salBrut = Number(prompt("Digite o salário"))
+        var salFamilia = Number(prompt("Digie o valor do salário família"))
+        var auxEscola = Number(prompt("Digite o valor do auxílio escola"))
+        var auxFarmacia = Number(prompt("Digite o valor do auxílio farmacia"))
+        
+        function calculo(x,a,e,r){  // Função que recebe 4 parâmetros e retorna um valor
+            var total = x + a + e + r
+            total =Number(total)
+            return total
+        }
+
+        function descontos(batata){  //Função que recebe 1 parâmetro e retorna esse mesmo valor após as contas
+            var inss = batata *0.11
+            var vale =(batata*0.06)
+            batata = batata - inss - vale // Conta primária
+            var varRetorno = 0
+
+            //Condicionais sobre o resultado da conta primária
+            if(batata >=2499 && batata <5000){ 
+                varRetorno = ( batata -= (batata*0.15))
+
+                document.write(`Penguin <br/>`)
+            }else if( batata >=5000){
+                varRetorno = ( batata -= (batata*0.275))
+                document.write(`Xablau <br/>`)
+            }
+            varRetorno =Number(varRetorno)
+            
+            //Retorna valor trabalhado
+            return varRetorno
+        }
+        //Resultado exercicio 1
+        document.write(`O valor total do salário é ${calculo(salBrut,salFamilia,auxEscola,auxFarmacia)} <br/>`) // Usa a função para retornar o valor somado
+        //Resultado exercicio 2
+        document.write(`O valor do salário de ${nome} com os descontos é de ${descontos(calculo(salBrut,salFamilia,auxEscola,auxFarmacia)).toFixed(2)}`)
+                        //Usa a função DESCONTOS para calcular os descontos e retorna um valor
+
+    
+    </script>
+</body>
+</html>

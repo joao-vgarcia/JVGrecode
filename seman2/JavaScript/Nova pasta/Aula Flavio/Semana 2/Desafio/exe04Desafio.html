@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio em equipe</title>
+</head>
+<body>
+    <script>
+        
+        
+
+
+        // Exercicio 4
+        
+        var estoque = Number(prompt("Digite a quantidade em estoque"))
+        var max = Number(prompt("Digite a quantidade máxima do produto"))
+        var min = Number(prompt("Digite a quantidade mínima do produto"))
+
+        function produtos(ma , mi, est){
+            var media = (ma + mi )/2
+            if(est >= media){
+                return "Não compre mais produtos, o estoque está em mais da metade"
+
+            }else{
+                return "Compre, pois o estoque é menor que a metade de produtos"
+            }
+        }
+
+        document.write(produtos(max,min,estoque))
+        
+
+    </script>
+    
+</body>
+</html>
